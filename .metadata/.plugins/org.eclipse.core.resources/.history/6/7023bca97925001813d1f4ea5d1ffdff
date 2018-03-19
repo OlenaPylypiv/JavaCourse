@@ -1,0 +1,47 @@
+
+public class Application {
+	
+		public static String encode(String phrase) {
+			
+			StringBuffer compressed = new StringBuffer();
+				
+		for(int i = 0; i < phrase.length(); i++) {
+			int count = 1;
+			if( phrase.charAt(i) == phrase.charAt(i+1) && (i+1) < phrase.length() && count < 9 ) {
+				count++;
+				i++;
+			}
+			if(count == 1) {
+				
+			compressed.append(phrase.charAt(i));
+			
+			}
+			else {
+				compressed.append(phrase.charAt(i));
+				compressed.append(count);
+			}
+	  }
+		return compressed.toString();
+		 
+	}
+	
+	
+	public static void main( String[] args )
+	{ 
+		String example = "hhhhhhhhhhh";
+	
+/***	if(args[0] == null) {
+		System.out.println("error");
+		return;
+	}
+		else if(args.length == 0) {
+			String k = "";
+			System.out.println(k);	
+		}
+		else{
+		***/	
+			 System.out.println(encode(example));
+	
+//	}
+ }
+}
