@@ -16,9 +16,7 @@ public class Application
 		 StringBuilder dest = new StringBuilder(args[0]);
          int count = 0;
          for(int i = 0; i< dest.length(); i++) {
-        	 if(dest.charAt(i) == '0'  ) {
-        	 }
-        	 }
+        	 if(dest.isDi   )
          }
 		
 		
